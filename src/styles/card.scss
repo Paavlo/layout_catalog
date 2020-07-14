@@ -14,19 +14,16 @@
     &-image {
       height: $image_height;
       width: $image_width;
-      transition: outline 0s,
-                  transform 1s;
+      transition: outline 0s, transform 1s;
       &:hover {
         box-sizing: content-box;
         outline: 3px solid $card-brdr-color;
         transform: scale($image_scale);
-        padding: 12px 1px;
+        padding: 12px 0;
         margin: -12px 0;
       }
     }
   }
-
-
 
   &__name {
     display: inline;
@@ -92,8 +89,7 @@
     color: #fff;
     border: 1px solid #00acdc;
     box-sizing: border-box;
-    transition: background 1s,
-                color 1s;
+    transition: background 1s, color 1s;
   }
 
   &__btn-link:hover {
