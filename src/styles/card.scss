@@ -1,8 +1,8 @@
 .card {
-  width: 200px;
-  height: 403px;
+  width: $cardWidth;
+  height: $cardHeight;
   margin: 0 0 50px;
-  padding: 14px;
+  padding: 30px 14px 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,17 +11,24 @@
   border-radius: 5px;
 
   &__photo {
-    margin: 16px 0 41px;
-  }
-
-  &__photo-image {
-    height: 134px;
-    width: 160px;
+    height: $image_height;
+    &-image {
+      height: $image_height;
+      width: $image_width;
+      transition: outline 0s, transform 1s;
+      &:hover {
+        box-sizing: content-box;
+        outline: 3px solid $card-brdr-color;
+        transform: scale($image_scale);
+        padding: 12px 0;
+        margin: -12px 0;
+      }
+    }
   }
 
   &__name {
     display: inline;
-    margin: 0 0 5px;
+    margin: 45px 0 5px;
     text-align: left;
     font-weight: 500;
     font-size: 12px;
@@ -83,6 +90,7 @@
     color: #fff;
     border: 1px solid #00acdc;
     box-sizing: border-box;
+    transition: background 1s, color 1s;
   }
 
   &__btn-link:hover {
