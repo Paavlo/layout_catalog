@@ -16,8 +16,9 @@
 
 .container {
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
-  flex: 944px 0 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  column-gap: 48px;
+  justify-content: center;
+  width: 944px;
 }
